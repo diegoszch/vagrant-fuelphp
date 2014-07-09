@@ -26,7 +26,15 @@ VHOST=$(cat <<EOF
 
     ErrorLog /var/log/apache2/error-$FILE.log
     LogLevel warn
-
+	
+    Alias /docs /var/www/$FILE/docs
+    <Directory "/var/www/$FILE/docs">
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Order allow,deny
+        Allow from all
+    </Directory>
+	
     <Directory "/var/www/$FILE/public">
         Options Indexes MultiViews FollowSymLinks
         AllowOverride All 

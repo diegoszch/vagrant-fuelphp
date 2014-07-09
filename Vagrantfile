@@ -5,8 +5,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     config.vm.box = "vfuelphp"
   
-    #config.vm.box_url = "http://files.vagrantup.com/precise64.box"
-    config.vm.box_url = "C:\\diego\\vms\\box-vagrant\\precise64.box"  
+    config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+    #config.vm.box_url = "C:\\diego\\vms\\box-vagrant\\precise64.box"  
 
     config.vm.network "forwarded_port", guest: 80, host: 8080
     config.vm.network "forwarded_port", guest: 3306, host: 33066
