@@ -1,27 +1,27 @@
 #!/usr/bin/env bash
 
-# Setando variaveis
+# Setting variables
 DIR="/vagrant/shell" 
 DIR_SERVICES=$DIR"/services"
 DIR_CMD=$DIR"/cmd"
 
-echo '[Atualizando Ubuntu Server]'
+echo '[Updating Ubuntu Server]'
 apt-get update
 
-echo '[Preparando ambiente]'
+echo '[Preparing Envoriment]'
 bash $DIR_SERVICES"/common.sh"
 
-echo '[Instalando Apache]'
+echo '[Installing Apache]'
 bash $DIR_SERVICES"/apache.sh"
 
-echo '[Instalando PHP]'
+echo '[Installing PHP]'
 bash $DIR_SERVICES"/php.sh"
 
-echo '[Configurando VHOSTS]'
+echo '[Setting VHOSTS]'
 bash $DIR_CMD"/addhost.sh" fuelphp.test
 
-echo '[Instalando MySQL]'
+echo '[Installing MySQL]'
 bash $DIR_SERVICES"/mysql.sh" $DIR_SERVICES
 
-echo '[Restartando os servicos]'
+echo '[Restarting the services]'
 bash $DIR_SERVICES"/restart.sh"

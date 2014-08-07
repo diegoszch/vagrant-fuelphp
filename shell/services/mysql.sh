@@ -6,7 +6,7 @@ debconf-set-selections <<< 'mysql-server mysql-server/root_password password roo
 debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password root'
 apt-get install -y mysql-server
 
-echo '[Habilitando acesso remoto MySQL]'
+echo '[Enabling access remote MySQL]'
 sed -i -e 's/bind-address/#bind-address/g' /etc/mysql/my.cnf 
 sed -i -e 's/skip-external-locking/#skip-external-locking/g' /etc/mysql/my.cnf
 
