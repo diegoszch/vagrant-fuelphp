@@ -31,5 +31,16 @@ echo '[Installing Composer...]'
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/
 
+#echo '[Installing Bower]'
+#sudo apt-get install -y python-software-properties
+#add-apt-repository -y ppa:chris-lea/node.js
+#apt-get -y update
+#apt-get -y install nodejs
+#npm install -g bower
+
+#apt-get install -y npm
+
+
+
 echo '[Installing FuelPHP]'
 curl get.fuelphp.com/oil | sh

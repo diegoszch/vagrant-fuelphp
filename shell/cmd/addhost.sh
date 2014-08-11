@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "Criando vhosts ${1}..."
+echo "Creating vhosts ${1}..."
 
 DIR_ATUAL=$(pwd)
 DIR_HTDOCS="/var/www"
@@ -11,7 +11,7 @@ FILE=${1}
 HOSTS_FILE="/etc/hosts"
 
 if [ -f $DIR_APACHE_ENABLE/$FILE ]; then
-	echo "O host $FILE ja existe!"
+	echo "The host $FILE exists!"
     exit
 fi
 
