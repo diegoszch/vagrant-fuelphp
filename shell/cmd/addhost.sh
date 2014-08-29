@@ -60,3 +60,5 @@ oil create $FILE
 cd $DIR_ATUAL
 
 bash createdb.sh $FILE
+
+service apache2 restart

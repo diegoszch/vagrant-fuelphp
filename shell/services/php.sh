@@ -26,6 +26,7 @@ pear config-set auto_discover 1
 pear install pear.phpunit.de/PHPUnit
 pear channel-discover pear.phpdoc.org
 pear install phpdoc/phpDocumentor
+pear install PHP_CodeSniffer
 
 echo '[Installing Composer...]'
 curl -sS https://getcomposer.org/installer | php
